@@ -1,0 +1,44 @@
+#ifndef __LCD_INIT_H
+#define __LCD_INIT_H
+
+#include "stm32f1xx_hal.h"  // HAL库头文件
+
+#define USE_HORIZONTAL 1  // 屏幕方向：0或1为竖屏，2或3为横屏
+
+#if USE_HORIZONTAL==0 || USE_HORIZONTAL==1
+#define LCD_W 128
+#define LCD_H 160
+#else
+#define LCD_W 160
+#define LCD_H 128
+#endif
+
+// 引脚定义 - 使用HAL库GPIO操作
+#define LCD_SCLK_Clr() HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET)
+#define LCD_SCLK_Set() HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET)
+
+#define LCD_MOSI_Clr() HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_RESET)
+#define LCD_MOSI_Set() HAL_GPIO_WritePin(GPIOA, GPIO_PIN_1, GPIO_PIN_SET)
+ 
+#define LCD_RES_Clr()  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_RESET)
+#define LCD_RES_Set()  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_2, GPIO_PIN_SET)
+
+#define LCD_DC_Clr()   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_RESET)
+#define LCD_DC_Set()   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, GPIO_PIN_SET)
+
+#define LCD_CS_Clr()   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_RESET)
+#define LCD_CS_Set()   HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, GPIO_PIN_SET)
+
+#define LCD_BLK_Clr()  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET)
+#define LCD_BLK_Set()  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_SET)
+
+void LCD_GPIO_Init(void);  // GPIO初始化
+void LCD_Writ_Bus(uint8_t dat);  // 模拟SPI写数据
+void LCD_WR_DATA8(uint8_t dat);  // 写8位数据
+void LCD_WR_DATA(uint16_t dat);  // 写16位数据
+void LCD_WR_REG(uint8_t dat);  // 写命令
+void LCD_Address_Set(uint16_t x1, uint16_t y1, uint16_t x2, uint16_t y2);  // 设置显示区域
+void LCD_Init(void);  // LCD初始化
+
+#endif
+
