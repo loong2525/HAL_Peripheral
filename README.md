@@ -10,6 +10,8 @@
 [LCD](d:\Project\stm32\HAL_Peripheral\工程常用\LCD)<br>
 [Key](d:\Project\stm32\HAL_Peripheral\工程常用\Key)<br>
 [Menu](d:\Project\stm32\HAL_Peripheral\工程常用\Menu)<br>
+motor - motor<br>
+      - pid
 
 ### 信号类
 [AD9959](d:\Project\stm32\HAL_Peripheral\信号类\AD9959)<br>
