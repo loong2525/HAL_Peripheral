@@ -4,6 +4,7 @@
 [SPI驱动LCD显示信号波形](https://www.cnblogs.com/loong2525/p/19003164)<br>
 [ADC信号采集](https://www.cnblogs.com/loong2525/p/18999737)<br>
 [信号处理__FFT变换](https://www.cnblogs.com/loong2525/p/19003886)<br>
+[DAC1220参考数据手册移植](https://www.cnblogs.com/loong2525/p/19930512)<br>
 ## 库文件
 ### 工程常用
 [KEY](d:\Project\stm32\HAL_Peripheral\工程常用\Key)<br>
@@ -19,6 +20,7 @@ motor<br>
 [AD9833](d:\Project\stm32\HAL_Peripheral\信号类\AD9833)<br>
 [AD9854](d:\Project\stm32\HAL_Peripheral\信号类\AD9854)<br>
 [TPL0401a](d:\Project\stm32\HAL_Peripheral\信号类\TPL0401a)<br>
+[DAC1220]()
 
 ### 控制类
 [MPU6050_DMP]<br>

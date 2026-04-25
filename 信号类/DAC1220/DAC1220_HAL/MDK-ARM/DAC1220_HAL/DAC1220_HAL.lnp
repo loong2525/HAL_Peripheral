@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"dac1220_hal\startup_stm32f103xb.o"
+"dac1220_hal\main.o"
+"dac1220_hal\gpio.o"
+"dac1220_hal\stm32f1xx_it.o"
+"dac1220_hal\stm32f1xx_hal_msp.o"
+"dac1220_hal\stm32f1xx_hal_gpio_ex.o"
+"dac1220_hal\stm32f1xx_hal.o"
+"dac1220_hal\stm32f1xx_hal_rcc.o"
+"dac1220_hal\stm32f1xx_hal_rcc_ex.o"
+"dac1220_hal\stm32f1xx_hal_gpio.o"
+"dac1220_hal\stm32f1xx_hal_dma.o"
+"dac1220_hal\stm32f1xx_hal_cortex.o"
+"dac1220_hal\stm32f1xx_hal_pwr.o"
+"dac1220_hal\stm32f1xx_hal_flash.o"
+"dac1220_hal\stm32f1xx_hal_flash_ex.o"
+"dac1220_hal\stm32f1xx_hal_exti.o"
+"dac1220_hal\system_stm32f1xx.o"
+"dac1220_hal\dac1220.o"
+--strict --scatter "DAC1220_HAL\DAC1220_HAL.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "DAC1220_HAL.map" -o DAC1220_HAL\DAC1220_HAL.axf
